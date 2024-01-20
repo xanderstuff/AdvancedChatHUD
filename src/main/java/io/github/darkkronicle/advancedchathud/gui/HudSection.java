@@ -166,7 +166,7 @@ public class HudSection extends AdvancedChatScreenSection {
     @Override
     public boolean mouseClicked(double mouseX, double mouseY, int button) {
         if (button == 1) {
-            createContextMenu((int) mouseX, (int) mouseY);
+            createContextMenu((int) mouseX + 2, (int) mouseY + 2); // with an offset so that immediate accidental clicks don't activate the first menu item
             return true;
         }
         if (menu != null && menu.onMouseClicked((int) mouseX, (int) mouseY, button)) {
